@@ -1,0 +1,1 @@
+if(localStorage.getItem('wes-theme')==='dark')document.body.classList.add('dark');const b=document.querySelector('#themeBtn');if(b)b.onclick=()=>{document.body.classList.toggle('dark');localStorage.setItem('wes-theme',document.body.classList.contains('dark')?'dark':'light')};

@@ -1,0 +1,1 @@
+document.querySelector('#contactForm').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))}),j=await r.json();document.querySelector('#formMsg').textContent=j.message||j.error;if(r.ok)f.reset()};

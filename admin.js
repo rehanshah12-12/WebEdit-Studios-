@@ -1,0 +1,1 @@
+Promise.all([fetch('/api/admin/users'),fetch('/api/admin/messages')]).then(async([u,m])=>{if(!u.ok)return location='/login.html';document.querySelector('#users').textContent=JSON.stringify((await u.json()).users,null,2);document.querySelector('#messages').textContent=JSON.stringify((await m.json()).messages,null,2)}).catch(()=>location='/login.html');

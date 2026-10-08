@@ -1,0 +1,21 @@
+{
+  "name":"webedit-studio",
+  "version":"1.0.0",
+  "private":true,
+  "description":"WebEdit Studio full-stack website",
+  "main":"server.js",
+  "scripts":{"start":"node server.js","dev":"node --watch server.js"},
+  "engines":{"node":">=20"},
+  "dependencies":{
+    "bcrypt":"^6.0.0",
+    "compression":"^1.8.1",
+    "connect-pg-simple":"^10.0.0",
+    "dotenv":"^17.2.2",
+    "express":"^5.1.0",
+    "express-rate-limit":"^7.5.0",
+    "express-session":"^1.18.2",
+    "helmet":"^8.1.0",
+    "pg":"^8.16.3",
+    "zod":"^3.25.76"
+  }
+}

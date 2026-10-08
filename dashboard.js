@@ -1,0 +1,1 @@
+fetch('/api/me').then(r=>r.json()).then(x=>{if(!x.user)return location='/login.html';document.querySelector('#welcome').textContent='Welcome, '+x.user.name});document.querySelector('#logout').onclick=async()=>{await fetch('/api/logout',{method:'POST'});location='/'};
